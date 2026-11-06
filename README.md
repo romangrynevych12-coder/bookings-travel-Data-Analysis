@@ -54,3 +54,32 @@ The platform should consider expanding targeted promotional campaigns, as bookin
 ### Limitations
 
 The analysis identifies differences in cancellation rates but does not establish a causal relationship between promotional offers and booking completion. Other factors, such as customer preferences, booking lead time, and property type, may influence cancellation behavior. Additionally, the dataset is synthetically generated, so the findings should be treated as illustrative rather than representative of actual customer behavior. Further analysis using real booking data and controlled experiments would be necessary to validate the proposed recommendations.
+
+
+## 3. Gross Booking Value Analysis by Property Type
+
+**Business Question:** Which property type generates the highest gross booking value?
+
+**Objective:** Evaluate the financial performance of different accommodation categories by comparing total booking value, completed booking volume, and average booking value to identify key contributors to overall booking activity.
+
+### Key Findings
+
+The analysis examined 926 completed bookings across four property categories: Apartments, Hotels, Hostels, and Villas. It evaluated the total gross booking value and average booking value for each category to identify differences in their financial contribution.
+
+The results reveal that Apartments generated the highest total booking value of 355,989, followed by Hotels with 293,313. Hostels contributed 151,092, while Villas recorded the lowest total booking value at 99,389. Despite their lower overall contribution, Hostels achieved the highest average booking value of 1,034.88, compared to 1,008.47 for Apartments, 1,024.63 for Villas, and 888.83 for Hotels.
+
+These findings highlight the importance of considering both booking volume and average booking value when evaluating accommodation performance. Apartments lead in total booking value primarily due to their higher number of completed bookings, while Hostels demonstrate that categories with fewer bookings can still generate relatively high average transaction values.
+
+**SQL Query:** [View SQL Analysis](sql/03_booking_value.sql)
+
+**Results:** [View Analysis Output](results/03_booking_value_results.csv)
+
+### Business Recommendation
+
+The platform should prioritize maintaining strong visibility and availability for Apartments, as they represent the largest contributor to total gross booking value. Marketing teams could explore targeted campaigns and personalized recommendations to strengthen demand within this category while monitoring booking conversion and cancellation rates.
+
+At the same time, the platform should investigate opportunities to increase booking volume in categories with relatively high average booking values, particularly Hostels and Villas. Strategies such as improving search visibility, optimizing property listings, and testing personalized offers could help increase completed bookings. Performance should be evaluated using both gross booking value and profitability to ensure sustainable growth.
+
+### Limitations
+
+The analysis measures gross booking value rather than actual platform revenue, as commission rates, operating costs, and promotional expenses are not included. Differences between property categories may also reflect variations in booking volume, length of stay, and nightly prices. Additionally, the dataset is synthetically generated, with accommodation prices assigned independently of property type, meaning the observed patterns should not be considered representative of real market conditions. Further analysis using actual transaction data would be necessary to validate these findings and assess profitability.
