@@ -83,3 +83,34 @@ At the same time, the platform should investigate opportunities to increase book
 ### Limitations
 
 The analysis measures gross booking value rather than actual platform revenue, as commission rates, operating costs, and promotional expenses are not included. Differences between property categories may also reflect variations in booking volume, length of stay, and nightly prices. Additionally, the dataset is synthetically generated, with accommodation prices assigned independently of property type, meaning the observed patterns should not be considered representative of real market conditions. Further analysis using actual transaction data would be necessary to validate these findings and assess profitability.
+
+## 4. Customer Booking Frequency Segmentation
+
+**Business** Question: How does booking frequency vary across customers?
+
+**Objective:** Analyze customer booking frequency by segmenting users into three categories based on their total number of bookings. Evaluate the distribution of customers across these segments to identify booking activity patterns and explore opportunities for customer engagement and retention strategies.
+
+### Key Findings
+
+The analysis examined 372 unique customers and classified them into three segments based on their booking frequency: One-Time customers (1 booking), Occasional customers (2–3 bookings), and Frequent customers (4 or more bookings). It calculated the total number and percentage of customers in each segment to evaluate differences in booking activity.
+
+The results reveal that Occasional customers represent the largest segment, accounting for 178 users (47.85% of the customer base). Frequent customers form the second-largest group, with 136 users (36.56%), while One-Time customers account for 58 users (15.59%). Overall, 84.41% of customers have made at least two bookings, indicating that multiple bookings per customer are common within the generated dataset.
+
+These findings demonstrate how customer segmentation can provide a clearer understanding of booking frequency distribution. While Occasional customers represent the largest share of users, the substantial proportion of Frequent customers highlights the importance of examining differences in booking activity when developing customer engagement strategies.
+
+**SQL Query:** [View SQL Analysis](sql/04_customer_segmentation.sql)
+
+**Results:** [View Analysis Output](results/04_customer_segmentation_results.csv)
+
+### Business Recommendation
+
+The platform should consider developing targeted engagement strategies for different customer segments. Occasional customers could be encouraged to make additional bookings through personalized recommendations, relevant promotional offers, and improved booking experiences. Frequent customers could be considered for loyalty programs or exclusive benefits designed to encourage continued engagement.
+
+At the same time, the platform should investigate potential barriers preventing One-Time customers from making additional bookings. Customer feedback, booking experience analysis, and targeted communication campaigns could help identify opportunities to encourage repeat bookings. The effectiveness of these initiatives should be evaluated through controlled experiments and customer engagement metrics rather than assuming that higher booking frequency automatically translates into greater profitability.
+
+### Limitations
+
+The analysis is based on synthetically generated data, with bookings assigned randomly to users. Therefore, the observed customer distribution does not necessarily reflect real customer behavior or loyalty patterns. Additionally, the segmentation thresholds are analytical assumptions rather than established business classifications.
+
+The dataset does not include booking dates or customer registration dates, making it impossible to measure retention rates, booking frequency over specific periods, or changes in customer activity over time. Furthermore, the analysis counts all bookings regardless of completion status, meaning cancelled bookings are also included in customer frequency calculations. Further analysis using real customer transaction histories, booking timestamps, and completed booking values would be necessary to assess customer retention and long-term business value.
+
