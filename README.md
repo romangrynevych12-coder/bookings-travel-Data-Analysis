@@ -10,9 +10,11 @@ End-to-end data analytics project using Python and PostgreSQL. Generated a synth
 
 ### Key Findings
 
-The analysis compares booking cancellation rates across four property categories: Apartments, Hotels, Villas, and Hostels.
+The analysis examined booking cancellation patterns across four property categories: Apartments, Hotels, Villas, and Hostels, aiming to identify differences in cancellation rates and potential areas for improvement.
 
-Villas have the highest cancellation rate at 23.62%, while hostels have the lowest at 19.78%, representing a difference of 3.84 percentage points.
+The results reveal variations in cancellation rates across property types. Villas recorded the highest cancellation rate at 23.62%, while hostels demonstrated the lowest rate at 19.78%, representing a difference of 3.84 percentage points.
+
+These findings highlight the importance of monitoring cancellation patterns across different accommodation categories and suggest potential opportunities to improve booking completion rates through targeted strategies. Further investigation would be necessary to understand the factors contributing to these differences.
 
 **SQL Query:** [View SQL Analysis](sql/01_cancellation_analysis.sql)
 
@@ -20,10 +22,11 @@ Villas have the highest cancellation rate at 23.62%, while hostels have the lowe
 
 ### Business Recommendation
 
-The platform should investigate the reasons behind higher cancellation rates in certain property categories. Potential improvements include clearer cancellation policies, more accurate property descriptions, and automated booking reminders.
+The platform should prioritize investigating cancellation patterns among villa bookings, as villas have the highest cancellation rate (23.62%) compared to other property types. Potential strategies include improving property descriptions, introducing clearer cancellation policies, and implementing automated booking reminders to encourage customers to complete their reservations. The platform could also test targeted interventions for higher-risk bookings and monitor cancellation rates across property categories to evaluate their effectiveness.
 
 ### Limitations
-The dataset is synthetically generated, and cancellation statuses are randomly assigned. Therefore, observed differences between property types should not be interpreted as evidence of causal relationships.
+
+The analysis identifies differences in cancellation rates across property types but does not establish that property type directly influences cancellation behavior. Other factors, such as booking lead time, price per night, and customer preferences, may contribute to these differences. Additionally, the dataset is synthetically generated, with cancellation statuses assigned randomly, so the findings should be interpreted as illustrative rather than representative of actual customer behavior. Further analysis using real booking data would be necessary to identify the underlying causes of cancellations and validate the proposed recommendations.
 
 
 ## 2. Promotional Offers and Booking Cancellation Analysis
@@ -34,9 +37,11 @@ The dataset is synthetically generated, and cancellation statuses are randomly a
 
 ### Key Findings
 
-The analysis compares cancellation rates across 1,200 bookings, including 358 bookings with promotional offers and 842 bookings without them.
+The analysis examined 1,200 bookings to evaluate the relationship between promotional offers and booking cancellation rates. Of these, 358 bookings included promotional offers, while 842 were made without them.
 
-Bookings without promotional offers have a cancellation rate of 24.47%, while bookings with promotional offers have a lower cancellation rate of 18.99%, representing a difference of 5.48 percentage points.
+The results reveal a noticeable difference in cancellation patterns between the two groups. Bookings without promotional offers recorded a cancellation rate of 24.47%, compared to 18.99% for bookings with promotions, representing a 5.48 percentage point difference.
+
+These findings highlight a potential opportunity to explore promotional strategies as a way to improve booking completion rates, although further investigation is required to determine whether promotions directly influence customer behavior.
 
 **SQL Query:** [View SQL Analysis](sql/02_promotion_analysis.sql)
 
