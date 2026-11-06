@@ -72,7 +72,7 @@ These findings highlight the importance of considering both booking volume and a
 
 **SQL Query:** [View SQL Analysis](sql/03_booking_value.sql)
 
-**Results:** [View Analysis Output](results/03_booking_value_results.csv)
+**Results:** [View Analysis Output](03_booking_value_results.csv)
 
 ### Business Recommendation
 
