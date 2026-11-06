@@ -2,10 +2,10 @@
 -- Which property type has the highest cancellation rate?
 
 SELECT
-    property_type,
-    COUNT(*) AS total_bookings,
-    SUM(CASE WHEN status = 'Cancelled' THEN 1 ELSE 0 END) AS cancelled_bookings,
-    ROUND(
+    property_type
+    ,COUNT(*) AS total_bookings
+    ,SUM(CASE WHEN status = 'Cancelled' THEN 1 ELSE 0 END) AS cancelled_bookings
+    ,ROUND(
         SUM(CASE WHEN status = 'Cancelled' THEN 1 ELSE 0 END) * 100.0
         / COUNT(*),
         2
