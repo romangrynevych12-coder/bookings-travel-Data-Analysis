@@ -1,3 +1,5 @@
+-- Business Question 2:
+-- Do promotional offers affect booking cancellation rates?
 SELECT
     has_promo
     ,COUNT(*) AS total_bookings
