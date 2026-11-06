@@ -70,7 +70,7 @@ The results reveal that Apartments generated the highest total booking value of 
 
 These findings highlight the importance of considering both booking volume and average booking value when evaluating accommodation performance. Apartments lead in total booking value primarily due to their higher number of completed bookings, while Hostels demonstrate that categories with fewer bookings can still generate relatively high average transaction values.
 
-**SQL Query:** [View SQL Analysis](sql/03_booking_value.sql)
+**SQL Query:** [View SQL Analysis](sql/03_booking_value_analysis.sql)
 
 **Results:** [View Analysis Output](results/03_booking_value_results.csv)
 
