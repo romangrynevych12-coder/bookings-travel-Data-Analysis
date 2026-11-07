@@ -86,7 +86,7 @@ The analysis measures gross booking value rather than actual platform revenue, a
 
 ## 4. Customer Booking Frequency Segmentation
 
-**Business** Question: How does booking frequency vary across customers?
+**Business Question:** How does booking frequency vary across customers?
 
 **Objective:** Analyze customer booking frequency by segmenting users into three categories based on their total number of bookings. Evaluate the distribution of customers across these segments to identify booking activity patterns and explore opportunities for customer engagement and retention strategies.
 
@@ -113,4 +113,35 @@ At the same time, the platform should investigate potential barriers preventing 
 The analysis is based on synthetically generated data, with bookings assigned randomly to users. Therefore, the observed customer distribution does not necessarily reflect real customer behavior or loyalty patterns. Additionally, the segmentation thresholds are analytical assumptions rather than established business classifications.
 
 The dataset does not include booking dates or customer registration dates, making it impossible to measure retention rates, booking frequency over specific periods, or changes in customer activity over time. Furthermore, the analysis counts all bookings regardless of completion status, meaning cancelled bookings are also included in customer frequency calculations. Further analysis using real customer transaction histories, booking timestamps, and completed booking values would be necessary to assess customer retention and long-term business value.
+ 
 
+
+## 5. Booking Lead Time vs Cancellation Rate
+
+**Business Question:**  How does booking lead time relate to cancellation rates?
+
+**Objective:** Analyze cancellation patterns across different booking lead time categories by comparing booking volumes, cancelled bookings, and cancellation rates. Identify differences in cancellation frequency between last-minute and advance bookings to explore potential opportunities for improving booking management and customer engagement.
+
+### Key Findings
+
+The analysis examined 1,200 bookings and classified them into four categories based on the number of days between booking and the planned stay: Last-minute (0–7 days), Short-term (8–14 days), Medium-term (15–30 days), and Long-term (31 or more days). Cancellation rates were calculated for each category to compare booking outcomes across different lead time periods.
+
+The results reveal that Medium-term bookings recorded the highest cancellation rate at 25.30%, with 83 cancellations out of 328 bookings. Short-term bookings followed with a cancellation rate of 23.53% (32 out of 136), while Long-term bookings accounted for the largest booking volume at 584 bookings and recorded a cancellation rate of 22.26% (130 cancellations). Last-minute bookings demonstrated the lowest cancellation rate at 19.08%, with 29 cancellations out of 152 bookings.
+
+The difference between the highest and lowest cancellation rates was 6.22 percentage points. However, the results do not indicate a consistent relationship between booking lead time and cancellation probability, as cancellation rates do not increase or decrease steadily across the four categories. These findings highlight the importance of examining booking behavior across multiple lead time segments rather than assuming that earlier reservations are necessarily more likely to be cancelled.
+
+**SQL Query:** [View SQL Analysis](sql/05_lead_time_analysis.sql)
+
+**Results:** [View Analysis Output](results/05_lead_time_results.csv)
+
+### Business Recommendation
+
+The platform should consider monitoring cancellation rates across different booking lead time segments to identify potential patterns in customer behavior. Medium-term bookings could be investigated further to understand whether factors such as changes in travel plans, cancellation policies, or customer uncertainty contribute to cancellation decisions. Additional analysis using real booking data could help determine whether this segment requires targeted intervention.
+
+The platform could also explore automated booking reminders, flexible modification options, and personalized communication strategies to improve customer engagement before scheduled stays. These initiatives should be tested across different lead time categories, with their effectiveness evaluated through controlled experiments and metrics such as cancellation rates, completed booking value, and customer satisfaction. Any changes should be assessed for their impact on both customer experience and business profitability.
+
+### Limitations
+
+The analysis is based on synthetically generated data, with booking lead times and cancellation statuses assigned independently. Therefore, the observed differences in cancellation rates reflect random variation rather than a demonstrated relationship between booking lead time and customer behavior. The findings should not be interpreted as evidence that booking lead time influences cancellation probability.
+
+Additionally, the lead time categories are analytical assumptions rather than established business classifications. The dataset does not include booking dates, travel purposes, cancellation reasons, or cancellation policy details, limiting the ability to explain differences between segments. Further analysis using real transaction data and additional customer and booking characteristics would be necessary to validate these findings and identify meaningful predictors of cancellation behavior.
