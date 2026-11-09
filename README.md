@@ -2,6 +2,16 @@
 End-to-end data analytics project using Python and PostgreSQL. Generated a synthetic dataset of 1,200 travel bookings, performed SQL analysis, and developed data-driven business recommendations.
 
 
+## Power BI Dashboard
+
+Interactive dashboard developed in Power BI to visualize booking performance, cancellation patterns, customer segments, and gross booking value.
+
+![Travel Booking Analytics Dashboard](dashboard/dashboard.png)
+
+[Download Power BI Dashboard (.pbix)](dashboard/Travel_Booking_Dashboard.pbix)
+
+
+
 ## 1. Booking Cancellation Analysis
 
 **Business Question:** Which property type has the highest booking cancellation rate?
