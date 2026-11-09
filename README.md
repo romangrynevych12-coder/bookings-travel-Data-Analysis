@@ -1,5 +1,5 @@
 # bookings-travel-Data-Analysis
-End-to-end data analytics project using Python and PostgreSQL. Generated a synthetic dataset of 1,200 travel bookings, performed SQL analysis, and developed data-driven business recommendations.
+End-to-end data analytics project using Python, PostgreSQL, SQL, and Power BI. Generated a synthetic dataset of 1,200 travel bookings, analyzed booking cancellations, promotional offers, gross booking value, customer segmentation, and booking lead times, and developed an interactive dashboard to communicate key findings and business recommendations.
 
 
 ## Power BI Dashboard
